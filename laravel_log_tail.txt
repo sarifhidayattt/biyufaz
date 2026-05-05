@@ -1,0 +1,23 @@
+﻿use App\Http\Controllers\BookingController;
+
+Route::get('/booking/{id}', [BookingController::class, 'show'])->name('booking.show');
+Route::post('/booking/store', [BookingController::class, 'store'])->name('booking.store');
+Route::get('/booking/success/{id}', [BookingController::class, 'success'])->name('booking.success');
+
+### 3. Sisi Frontend (React)
+
+Gunakan file ini di dalam proyek Anda. Kode ini sudah disempurnakan agar menerima data dari Laravel secara dinamis.
+
+
+http://googleusercontent.com/immersive_entry_chip/1
+
+### Catatan Penting untuk Mengatasi Error:
+
+1.  **Hapus Cache Route:** Setelah Anda menyalin `BookingController.php` ke folder yang benar, jalankan perintah ini di terminal proyek Laravel Anda:
+    ```bash
+    php artisan route:clear
+    php artisan config:clear
+    2.  **Namespace:** Pastikan baris pertama di file Controller Anda adalah `namespace App\Http\Controllers;`. Jika tidak, Laravel tidak akan bisa menemukannya.
+3.  **Daftarkan Model:** Pastikan Anda sudah memiliki Model `Venue`, `Booking`, dan `Transaction` agar tidak ada error "Class not found" di dalam Controller.
+
+Gunakan fitur **Preview** di kanan untuk mencoba transisi otomatis setelah Anda mengklik tombol simulasi!
